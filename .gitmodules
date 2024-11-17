@@ -1,0 +1,6 @@
+[submodule "dkan"]
+	path = dkan
+	url = git@github.com:OSU-Open-Data-Platform/dkan.git
+[submodule "docroot/frontend"]
+	path = docroot/frontend
+	url = git@github.com:OSU-Open-Data-Platform/dkan-frontend.git

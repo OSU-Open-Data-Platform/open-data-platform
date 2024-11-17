@@ -1,0 +1,16 @@
+# ignore composer dependencies
+vendor/
+composer.lock
+
+# log and cache files
+*.log
+*.cache
+
+# ignore submodule working directories
+dkan/*
+docroot/frontend/*
+!dkan/.git
+!docroot/frontend/.git
+
+# idk what this is - build artifacts?
+src/tmp

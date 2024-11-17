@@ -1,0 +1,5 @@
+services:
+  facets_exposed_filters.facets_exposed_filters_subscriber:
+    class: Drupal\facets_exposed_filters\EventSubscriber\FacetsExposedFiltersSubscriber
+    tags:
+      - { name: event_subscriber }
