@@ -15,16 +15,13 @@ the frontend, do it in their delegated repository.**
 
 ## how do i run the site?
 
-1. install dependencies
-1. clone this repository with the `--recurse-submodules` flag
-1. `git submodule update --init` seems necessary to get the frontend
-1. `ddev composer install`
-1. `ddev launch`
-
-mabe:
-1. `ddev dkan-site-install`
-mistakes:
-1. `ddev drush site:install`
+1. install requirements
+1. clone this repository with the `--recurse-submodules` flag (ymmv, try next step)
+1. `git submodule update --init` seems necessary for me
+1. `ddev composer install` to install php dependencies in the backend container
+1. `ddev dkan-frontend-install` to install node dependencies in the frontend container
+1. `ddev dkan-frontend-build` to build the frontend in the container
+1. `ddev launch` to see if everything works!
 
 ## TODO
 
@@ -33,5 +30,6 @@ mistakes:
 
 ## what's where?
 
+* ddev scripts: `.ddev/commands`
 * frontend: `docroot/frontend`
 * DKAN: `dkan/`
