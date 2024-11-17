@@ -15,8 +15,16 @@ the frontend, do it in their delegated repository.**
 
 ## how do i run the site?
 
-1. clone this repository
-2. TODO ddev stuff
+1. install dependencies
+1. clone this repository with the `--recurse-submodules` flag
+1. `git submodule update --init` seems necessary to get the frontend
+1. `ddev composer install`
+1. `ddev launch`
+
+mabe:
+1. `ddev dkan-site-install`
+mistakes:
+1. `ddev drush site:install`
 
 ## TODO
 
