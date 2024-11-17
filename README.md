@@ -18,8 +18,12 @@ the frontend, do it in their delegated repository.**
 1. install requirements
 1. clone this repository with the `--recurse-submodules` flag (ymmv, try next step)
 1. `git submodule update --init` seems necessary for me
-1. `ddev composer install` to install php dependencies in the backend container
-1. `ddev dkan-frontend-install` to install node dependencies in the frontend container
+1. `ddev config`, keep default options (TODO fix this. The generated .ddev/.gitignore makes this necessary, I think)
+1. `ddev restart`, which should spin up some containers
+1. `ddev composer install` to install php dependencies in the web container
+1. `ddev dkan-site-install` to install/configure Drupal in the web container (NOTE if we change drupal we will need to change this step)
+  1. At this point, `ddev drush status-report` should look OK
+1. `ddev dkan-frontend-install` to install node dependencies in the web container
 1. `ddev dkan-frontend-build` to build the frontend in the container
 1. `ddev launch` to see if everything works!
 
